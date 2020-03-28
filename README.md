@@ -44,41 +44,35 @@ Below is an example of a block of code in the JS file where most of the logic be
 
 JavaScript
 ```js
-answersElement.addEventListener("click", function(event) {
-    console.log("answer chosen");
-    var element = event.target;
-    if (element.textContent !== quizQuestions[i].correct) {
-        console.log(element)
-        console.log("Wrong Answer")
-        resultElement.textContent = "Incorrect!";
-        console.log(resultElement.textContent)
-        document.getElementById("result").style.color = 'red';            
-        console.log(resultElement.style.color)
+for (var i = 0; i < plannerDayHours.length; i++) {
+    var newTR = $("<tr>newTR</tr>");
+    newTR.addClass("row");
+    $(".container").append(newTR);
 
-    } else {
-        console.log(element)
-        console.log("Right Answer")
-        resultElement.textContent = "Correct!";
-        console.log(resultElement.textContent)
-        document.getElementById("result").style.color = 'green';            
-        console.log(resultElement.style.color)
-        userScore += 10
-        console.log(userScore)
+    var hourDisplay = $("<td>" + plannerDayHours[i].hour + "</td>");
+    var eventDisplay = $("<td><textarea>" + plannerDayHours[i].event + "</textarea></td>");
+    var saveDisplay = $("<td>Save</td>");
 
+    hourDisplay.addClass("hour");
+    eventDisplay.addClass("event");
+    saveDisplay.addClass("saveBtn");
+    saveDisplay.attr("id", "li" + i);
+
+    if (plannerDayHours[i].number == now) {
+        eventDisplay.addClass("present");
     }
-    if (i < quizQuestions.length - 1) {
-    i++;
-    quiz();
-    } else {
-    clearInterval(timeInterval)    
-    alert("Quiz Complete!");
-    userScore += secondsLeft
-    console.log(userScore)
-    alert(userScore);
-    endQuiz();
-    restartQuiz();
+
+    if (plannerDayHours[i].number > now) {
+        eventDisplay.addClass("future");
     }
-});
+
+    else if (plannerDayHours[i].number < now) {
+        eventDisplay.addClass("past");
+    }
+
+    $(newTR).append(hourDisplay, eventDisplay, saveDisplay);
+
+};
 ```
 
 ## Author Links
