@@ -1,4 +1,4 @@
-# 04 Third-Party APIs: Work Day Planner
+# 05 Third-Party APIs: Work Day Planner
 
 ## Summary 
 
@@ -27,7 +27,7 @@ THEN the saved events persist
 ```
 
 ## Site Picture
-![Site](Assets/05-third-party-apis-homework-demo.gif)
+![Site](Assets/work-day-scheduler.png)
 
 ## Technologies Used
 - HTML - used to create elements on the DOM
@@ -42,6 +42,7 @@ THEN the saved events persist
 
 Below is an example of a block of code in the JS file where most of the logic behind the quiz is stored. First I created a function enacted on the user's click on an answer choice checking it against the answer key to the question then displayed whether it was correct or incorrect in the result field and added or subtracted points accordingly. 
 
+JavaScript
 ```js
 answersElement.addEventListener("click", function(event) {
     console.log("answer chosen");
@@ -86,6 +87,6 @@ Will Gibson
 
 [LinkedIn](https://www.linkedin.com/in/wtgibson/)
 
-[GitHub](https://github.com/wtgibson/4-code-quiz)
+[GitHub](https://github.com/wtgibson/5-work-day-scheduler)
 
 Special thanks to Mahisha Gunasekaran, Kerwin Hy, and Jeremy Cantwell, and Brad Davis for their input and assistance with the assignment!
