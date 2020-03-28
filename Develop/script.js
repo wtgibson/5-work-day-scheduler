@@ -54,5 +54,19 @@ for (var i = 0; i < plannerDayHours.length; i++) {
     }
 
     $(newTR).append(hourDisplay, eventDisplay, saveDisplay);
+
 };
+
+saveDisplay.on("click", function () {
+    var dataID = $(this).attr("id");
+
+    var index = dataID.split("li")[1];
+
+    newEvent = $("#" + dataID).val();
+
+    plannerDayHours[index].event = newEvent;
+
+    localStorage.setItem("plannerDayHours", JSON.stringify(plannerDayHours));
+
+});  
 
