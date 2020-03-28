@@ -32,11 +32,9 @@ for (var i = 0; i < plannerDayHours.length; i++) {
     newTR.addClass("row");
     $(".container").append(newTR);
 
-    // var imageSrc = "Assets/save.png"
-
     var hourDisplay = $("<td>" + plannerDayHours[i].hour + "</td>");
     var eventDisplay = $("<td><textarea>" + plannerDayHours[i].event + "</textarea></td>");
-    var saveDisplay = $("<td><img src=#></td>");
+    var saveDisplay = $("<td>Save</td>");
 
     hourDisplay.addClass("hour");
     eventDisplay.addClass("event");
