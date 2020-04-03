@@ -40,7 +40,7 @@ THEN the saved events persist
 
 ## Code Snippet
 
-Below is an example of a block of code in the JS file where most of the logic behind the quiz is stored. First I created a function enacted on the user's click on an answer choice checking it against the answer key to the question then displayed whether it was correct or incorrect in the result field and added or subtracted points accordingly. 
+Below is an example of a block of code in the JS file where the business hour elements are being created with classes and attributes as well as a color determination based on whether the hour is in the past, present, of future compared to the time the user logs onto the application. All of which is being done dynamically from the script onto the DOM when the browders renders the page.
 
 JavaScript
 ```js
